@@ -1,0 +1,23 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "modules": false,
+                "corejs": 3,
+                "useBuiltIns": "entry",
+                "targets": [
+                    "last 2 versions",
+                    "ie >= 11",
+                    "ios >= 8",
+                    "android >= 5"
+                ]
+            }
+        ],
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        ["@babel/plugin-transform-runtime", { "corejs": 3 }]
+    ]
+}
