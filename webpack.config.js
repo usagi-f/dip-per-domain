@@ -1,11 +1,14 @@
 const fs = require('fs');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const convertRootPath = filename => path.resolve(__dirname, filename);
 
+const integrateDir = './src/integrate';
+
 module.exports = () => {
     return {
-        entry: './src/integrate/index.tsx',
+        entry: `${integrateDir}/index.tsx`,
         output: {
             path: convertRootPath('dist'),
             filename: 'index.js',
@@ -35,6 +38,12 @@ module.exports = () => {
         resolve: {
             extensions: ['.ts', '.tsx', '.js', '.json'],
         },
+        plugins: [
+            new HtmlWebpackPlugin({
+                filename: 'index.html',
+                template: convertRootPath(`${integrateDir}/index.html`),
+            }),
+        ],
         devServer: {
             port: 3001,
             host: '0.0.0.0',

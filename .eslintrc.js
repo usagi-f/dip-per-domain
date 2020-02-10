@@ -24,6 +24,8 @@ module.exports = {
         project: "./tsconfig.json"
     },
     rules: {
+        'react/jsx-indent': ['error', 4],
+        'react/jsx-indent-props': ['error', 4],
         "prettier/prettier": [
             2,
             {
@@ -42,5 +44,15 @@ module.exports = {
                 extensions: ['.ts', '.tsx'],
             },
         ],
+        'import/extensions': [
+           "error",
+           "ignorePackages",
+           {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+           }
+        ]
     }
 }
