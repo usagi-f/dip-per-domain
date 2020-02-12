@@ -26,6 +26,10 @@ module.exports = {
     rules: {
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
+        'react/prop-types': 'off',
+        '@typescript-eslint/interface-name-prefix': [1, {
+            prefixWithI: 'always',
+        }],
         "prettier/prettier": [
             2,
             {
