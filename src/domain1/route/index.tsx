@@ -1,3 +1,4 @@
+// Must only depend on interface
 import {CommonRoute} from '../../integrate/interface';
 
 // entrypoints
