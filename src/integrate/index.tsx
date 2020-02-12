@@ -21,7 +21,9 @@ class App extends React.PureComponent {
                 </nav>
                 <Switch>
                     {Domain1.map(route => (
-                        <Route path={route.path}>{route.children}</Route>
+                        <Route path={route.path} key={route.path}>
+                            {route.children}
+                        </Route>
                     ))}
                     <Route path="/">
                         <div>root</div>
